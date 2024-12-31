@@ -7,6 +7,7 @@ from constants import (
     SCREEN_HEIGHT,
     SCREEN_WIDTH
 )
+from player import Player
 
 def main():
     pygame.init
@@ -19,6 +20,12 @@ def main():
             
         screen.fill((0,0,0))
         pygame.display.flip()
+    
+    x = SCREEN_WIDTH / 2
+    y = SCREEN_HEIGHT / 2
+    
+    player = Player(x, y)
+    player.draw(screen)
 
 if __name__ == "__main__":
     main()
